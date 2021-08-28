@@ -1,7 +1,7 @@
 
 # Apache Tika + PySpark
  
- Text extraction performance tuning results for huge-amount of files. The assessment conducted by combination with Apache Tika & PySpark & Multiprocessing.
+ Text extraction performance tuning results for a huge amount of files. The assessment conducted by combination with Apache Tika & PySpark & Multiprocessing.
  
  1. Apache Tika is a content detection and analysis framework, written in Java.
  
@@ -18,7 +18,7 @@
    dummy: test-data
    ```
    
-   Apache-Spark: All spark configurations have been already incorporated in [tika_with_spark.py].
+   + Apache-Spark: All spark configurations have been already incorporated in [tika_with_spark.py].
    
    ```python
    os.environ['JAVA_HOME'] = r'C:\Program Files\Java\jre1.8.0_201'
@@ -50,7 +50,6 @@
  - Apache Tika + PySpark
  
    ```bash
-   1:count 100 2:column size 1
    --- Text Extraction Started 0.0 seconds ---
    --- Completed 21.888809204101562 seconds ---
    --- Csv Export Completed 95.74139404296875 seconds ---
