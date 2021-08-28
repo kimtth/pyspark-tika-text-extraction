@@ -1,0 +1,8 @@
+pandas>=1.3.2
+pyarrow>=5.0.0
+openpyxl>=3.0.7
+XlsxWriter>=3.0.1
+xlrd>=2.0.1
+tika>=1.24
+pyspark
+findspark
