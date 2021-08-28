@@ -15,7 +15,7 @@
    tika-jar: tika-server.jar v1.24
    spark: spark-3.1.2-bin-hadoop2
    hadoop: hadoop
-   dummy: test-data
+   dummy: test-data-storage
    ```
    
    + Apache-Spark: All spark configurations have been already incorporated in [tika_with_spark.py].
@@ -28,7 +28,7 @@
    os.environ["PATH"] += os.pathsep + os.path.abspath(r"./hadoop/bin")
    ```
    
-   + tika-python: This API is binding to Apache Tika REST services, At the initial, API launches a tika-server instance, the extraction request will consume and process in server. When you try tika-app.jar is not going to be worked. 
+   + tika-python: This API is binding to Apache Tika REST services, At the initial, API launches a tika-server instance, the extraction request will consume and process in the server. When you try tika-app.jar, it is not going to be worked. 
    https://github.com/chrismattmann/tika-python
    
    + Application Code
