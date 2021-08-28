@@ -14,7 +14,7 @@
    ```
    tika-jar: tika-server.jar v1.24
    spark: spark-3.1.2-bin-hadoop2
-   hadoop: hadoop
+   hadoop: hadoop_winutils_2.7
    dummy: test-data-storage
    ```
    
@@ -41,11 +41,11 @@
    
  - The description of sample file for testing 
     
-    ```bash
-    CISA-CPE_bro_Kor_0415.pdf   400,768 bytes
-    strata_spark_streaming.ppt  4,847,616 bytes
     ```
-    Entire file: 100 files / 250 MB
+    CISA-CPE_bro_Kor_0415.pdf | Korean | 400,768 bytes * 50
+    strata_spark_streaming.ppt | English | 4,847,616 bytes * 50
+    ```
+    Entire files: 100 files / 250 MB
     
  - Apache Tika + PySpark
  
@@ -73,5 +73,5 @@
 
  #### In Conclusion: 
  
- Multi-Threads (Without Pyspark) could not make significant enhancement of text extraction performance. In some cases, Multi-Thread (Without Pyspark) will make frequently context-switching, this will make latency and poor performance than a single thread.
- Only along with Spark, you will achieve the best performance with remarkable enhancement.
+ Multi-Threads (Without Pyspark) could not make significant enhancement of text extraction performance. In some cases, Multi-Threads (Without Pyspark) will make frequently context-switching, this will result in latency and poor performance than a single thread.
+ Only along with Pyspark, you will achieve the best performance with remarkable enhancement.
