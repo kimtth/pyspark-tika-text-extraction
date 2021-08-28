@@ -3,7 +3,7 @@
  
  Text extraction performance tuning results for a huge amount of files. The assessment conducted by combination with Apache Tika & PySpark & Multiprocessing.
  
- 1. Apache Tika is a content detection and analysis framework, written in Java.
+ 1. Apache Tika is a content detection and text extraction framework, written in Java.
  
  2. Apache Spark is written in Scala programming language. PySpark is an interface for Apache Spark in Python.
  
@@ -28,14 +28,14 @@
    os.environ["PATH"] += os.pathsep + os.path.abspath(r"./hadoop/bin")
    ```
    
-   + tika-python: This API is binding to Apache Tika REST services, At the initial, API launches a tika-server instance, the extraction request will consume and process in the server. When you try tika-app.jar, it is not going to be worked. 
+   + tika-python: This API is binding to Apache Tika REST services, At the initial, API launches a tika-server instance, the extraction request will consume and process in the server. If you try tika-app.jar instead of tika-server.jar, it is not going to be worked. 
    https://github.com/chrismattmann/tika-python
    
    + Application Code
    
    ```
    dummy_data_gen.py: Test file Generator
-   tika_with_spark.py: Pyspark and Tike Integration Code
+   tika_with_spark.py: Pyspark and Tika Integration Code
    tika_without_spark.py: Tika code for Single and Multi Thread 
    ```
    
@@ -73,5 +73,5 @@
 
  #### In Conclusion: 
  
- Multi-Thread could not make significant enhancement of text extraction performance. In some cases, Multi-Thread will make frequently context-switching, this will make latency and poor performance than a single thread.
+ Multi-Threads (Without Pyspark) could not make significant enhancement of text extraction performance. In some cases, Multi-Thread (Without Pyspark) will make frequently context-switching, this will make latency and poor performance than a single thread.
  Only along with Spark, you will achieve the best performance with remarkable enhancement.
