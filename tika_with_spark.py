@@ -85,3 +85,5 @@ abs_file_path = os.path.abspath(".\\output\\output.csv")
 print("--- Completed %s seconds ---" % (time.time() - start_time))
 df2.toPandas().to_csv(abs_file_path, encoding='utf-8-sig')
 print("--- Csv Export Completed %s seconds ---" % (time.time() - start_time))
+
+spark.stop()
