@@ -71,7 +71,10 @@
     --- Step 2 199.58791089057922 seconds ---
     ```
 
- #### In Conclusion: 
+ #### Conclusion: 
  
- Multi-Threads (Without Pyspark) could not make significant enhancement of text extraction performance. In some cases, Multi-Threads (Without Pyspark) will make frequently context-switching, this will result in latency and poor performance than a single thread.
- Only along with Pyspark, you will achieve the best performance with remarkable enhancement.
+ Python Multi-Threads (Without Pyspark) could not make significant enhancement of text extraction performance. 
+
+ In some cases, Python Multi-Threads (Without Pyspark) will cause frequently context-switching, this will result in latency and poor performance than a single thread. Besides, Inherently Python is not free from GIL (Global Interpreter Lock). 
+
+ By Pyspark, Python will be used as only the intermediate script to transfer its command to Scala to JVM so you will achieve the best performance with remarkable enhancement.
