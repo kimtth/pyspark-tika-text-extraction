@@ -77,4 +77,4 @@
 
  In some cases, Python Multi-Threads (Without Pyspark) will cause frequently context-switching, this will result in latency and poor performance than a single thread. Besides, Inherently Python is not free from GIL (Global Interpreter Lock). 
 
- By Pyspark, Python will be used as only the intermediate script to transfer its command to Scala to JVM so you will achieve the best performance with remarkable enhancement.
+ By Pyspark, Python will be used as only the intermediate script to transfer its command to JVM so you will achieve the best performance with remarkable enhancement.
